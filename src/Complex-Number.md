@@ -44,8 +44,8 @@ tags:
 | $z$的虚部     | $z$的$y$坐标      | $ Im(z) $    |
 | 虚数          | $i$的实数倍       |              |
 | 实轴          | 实数的集合        |              |
-| 虚轴$z$       | 虚数的集合        |              |
-| $z$的复共轭   | $z$对实轴的反射   |              |
+| 虚轴          | 虚数的集合        |              |
+| $z$的复共轭   | $z$对实轴的反射   |$\overline{z}$|
 
 ![sign](https://github.com/trierbo/blog-source/raw/master/pics/complex-number/sign.png)
 
