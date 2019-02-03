@@ -2,7 +2,6 @@
 title: Complex Number
 date: 2018-01-15 11:18:43
 tags: 
-  - Math
   - Complex Analysis
 ---
 ### 复数概述
