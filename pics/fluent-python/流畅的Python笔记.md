@@ -1,4 +1,4 @@
-### 流畅的Python笔记
+###  流畅的Python笔记
 
 #### Python数据模型
 
@@ -182,4 +182,10 @@ UnboundLocalError: local variable '__file__' referenced before assignment
   'JP'
   ```
 
-  
+
+##### 切片
+
+> `a:b:c` 这种用法只能作为索引或者下标用在 `[]` 中来返回一个切片对象: `slice(a, b, c)`
+>
+> 对 `seq[start:stop:step]` 进 行 求 值 的 时 候,Python 会 调 用 `seq.__getitem__(slice(start, stop, step))`
+
