@@ -165,7 +165,7 @@ UnboundLocalError: local variable '__file__' referenced before assignment
 
   - `collections.namedtuple`
 
-    > The collections.namedtuple function is a factory that produces subclasses of tuple enhanced with field names and a class name
+    > The `collections.namedtuple` function is a factory that produces subclasses of tuple enhanced with field names and a class name
 
   ```python
   >>> from collections import namedtuple
