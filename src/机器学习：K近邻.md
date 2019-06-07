@@ -28,7 +28,7 @@ tags:
 > - 将叶节点保存到存储$k$近邻的优先队列中
 > - 向上回溯，在当前节点对应的区域查找$k$近邻
 >   - 如果优先队列未满，则保存当前节点，否则比较当前距离与优先队列中的最大距离
->   - 如果优先队列未满，则访问当前节点的另个子树，否则优先队列中的最大距离是否比到另个子区域要大
+>   - 如果优先队列未满，则访问当前节点的另个子树，否则比较优先队列中的最大距离是否比到另个子区域的距离要大
 > - 直到回溯到根节点
 
 #### 代码实现
@@ -197,7 +197,7 @@ for n in nearest:
     [4.9 3.1 1.5 0.2] dist: 0.20615528128088284
     [5.  3.2 1.2 0.2] dist: 0.20615528128088295
 
-![iris](https://github.com/trierbo/blog-source/raw/master/pics/knn/iris.png)
+![iris_knn](https://github.com/trierbo/blog-source/raw/master/pics/knn/iris_knn.png)
 
 ```python
 max(cat)
