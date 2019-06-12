@@ -23,7 +23,7 @@
 
 - `a + b`
 
-  ![1558787519609](C:\Users\trierbo\AppData\Roaming\Typora\typora-user-images\1558787519609.png)
+  ![a+b](a+b.png)
 
 #### 命名空间与作用域
 
