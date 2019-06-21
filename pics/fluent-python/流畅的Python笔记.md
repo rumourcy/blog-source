@@ -124,8 +124,7 @@ UnboundLocalError: local variable '__file__' referenced before assignment
   >>> colors = ['black', 'white']
   >>> sizes = ['S', 'M', 'L']
   >>> for tshirt in ('%s %s' % (c, s) for c in colors for s in sizes):
-  ...
-  print(tshirt)
+  ...     print(tshirt)
   ...
   black S
   black M
@@ -188,4 +187,6 @@ UnboundLocalError: local variable '__file__' referenced before assignment
 > `a:b:c` 这种用法只能作为索引或者下标用在 `[]` 中来返回一个切片对象: `slice(a, b, c)`
 >
 > 对 `seq[start:stop:step]` 进 行 求 值 的 时 候,Python 会 调 用 `seq.__getitem__(slice(start, stop, step))`
+
+#### 字典和集合
 
