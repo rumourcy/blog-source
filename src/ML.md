@@ -12,7 +12,7 @@ tags:
 | loss function/cost function/objection function | https://stats.stackexchange.com/questions/179026/objective-function-cost-function-loss-function-are-they-the-same-thing |
 | Logistic_loss                                  | https://en.wikipedia.org/wiki/Loss_functions_for_classification#Logistic_loss |
 | Factorization Machine                          | https://www.cnblogs.com/pinard/p/6370127.html<br />https://tracholar.github.io/machine-learning/2017/03/10/factorization-machine.html |
-| XGBoost                                        | https://www.cnblogs.com/pinard/p/10979808.html               |
+| XGBoost                                        | https://www.cnblogs.com/pinard/p/10979808.html<br />https://homes.cs.washington.edu/~tqchen/pdf/BoostedTree.pdf |
 |                                                |                                                              |
 |                                                |                                                              |
 
