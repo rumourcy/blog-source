@@ -7,7 +7,7 @@ tags:
 
 | Terminology                                    | Explanation                                                  |
 | ---------------------------------------------- | ------------------------------------------------------------ |
-| ROC/PRC/AUC                                    | https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python |
+| ROC/PRC/AUC                                    | https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python<br />https://blog.csdn.net/pzy20062141/article/details/48711355 |
 | L1/L2                                          | https://towardsdatascience.com/l1-and-l2-regularization-methods-ce25e7fc831c |
 | Loss Function/Cost Function/Objection Function | https://stats.stackexchange.com/questions/179026/objective-function-cost-function-loss-function-are-they-the-same-thing |
 | Logistic Loss                                  | https://en.wikipedia.org/wiki/Loss_functions_for_classification#Logistic_loss |
@@ -19,6 +19,11 @@ tags:
 | XGBoost                                        | https://xgboost.readthedocs.io/en/latest/tutorials/model.html<br />http://wepon.me/files/gbdt.pdf |
 | XGB/LGBM                                       | https://datascience.stackexchange.com/questions/26699/decision-trees-leaf-wise-best-first-and-level-wise-tree-traverse |
 | Regularization                                 | http://statweb.stanford.edu/~tibs/sta305files/Rudyregularization.pdf |
+| SGD/Momentum/Adagard/Adam                      | https://zh.d2l.ai/chapter_optimization/index.html            |
+| L1不可导                                       | https://blog.csdn.net/xiaocong1990/article/details/83039802<br />https://www.zhihu.com/question/38426074 |
+| 时间序列交叉验证                               | https://lonepatient.top/2018/06/10/time-series-nested-cross-validation.html |
+| 方差偏差的分解公式                             | https://blog.csdn.net/qq_32742009/article/details/82142119   |
+|                                                |                                                              |
 |                                                |                                                              |
 |                                                |                                                              |
 
