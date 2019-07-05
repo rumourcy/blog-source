@@ -1,11 +1,11 @@
 ---
 title: WhiteBoard
-date: 2019-06-10 20:42:20
+date: 2019-07-05 20:42:20
 tags:
 	- ZERO
 ---
 
-#### 二叉树遍历迭代写法
+#### 树节点定义
 
 ```C++
 struct TreeNode {
@@ -15,6 +15,12 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 ```
+
+#### 二叉树遍历迭代写法
+
+- [先序](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+- [中序](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+- [后序](https://leetcode.com/problems/binary-tree-postorder-traversal/)
 
 ```C++
 class Solution {
@@ -76,7 +82,7 @@ public:
 };
 ```
 
-#### 验证有效二叉搜索树（中序遍历有序）
+#### [验证有效二叉搜索树（中序遍历有序）](https://leetcode.com/problems/validate-binary-search-tree/)
 
 ```C++
 class Solution {
@@ -95,7 +101,7 @@ public:
 };
 ```
 
-#### 删除二叉搜索树指定节点
+#### [删除二叉搜索树指定节点](https://leetcode.com/problems/delete-node-in-a-bst/)
 
 ```C++
 class Solution {
@@ -128,7 +134,7 @@ public:
 };
 ```
 
-#### 翻转二叉树
+#### [翻转二叉树](https://leetcode.com/problems/invert-binary-tree/)
 
 ```C++
 class Solution {
@@ -145,7 +151,7 @@ public:
 };
 ```
 
-#### 是否为平衡二叉树
+#### [是否为平衡二叉树](https://leetcode.com/problems/balanced-binary-tree/)
 
 ```C++
 class Solution {
@@ -159,6 +165,25 @@ public:
     int getDepth(TreeNode* root) {
         if (root == NULL) return 0;
         return 1 + max(getDepth(root->left), getDepth(root->right));
+    }
+};
+```
+
+---
+
+#### [最大子数组和](https://leetcode.com/problems/maximum-subarray/)
+
+```c++
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        if (nums.size() == 0) return 0;
+        int maxSum = nums[0], prev = nums[0];
+        for (int i = 1; i < nums.size(); ++i) {
+            prev = max(prev+nums[i], nums[i]);
+            maxSum = max(maxSum, prev);
+        }
+        return maxSum;
     }
 };
 ```
