@@ -16,6 +16,19 @@ struct TreeNode {
 };
 ```
 
+#### 链表节点定义
+
+```C++
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+```
+
+---
+
 #### 二叉树遍历迭代写法
 
 - [先序](https://leetcode.com/problems/binary-tree-preorder-traversal/)
@@ -184,6 +197,98 @@ public:
             maxSum = max(maxSum, prev);
         }
         return maxSum;
+    }
+};
+```
+
+---
+
+#### [找第k大元素](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
+```C++
+class Comp {
+public:
+    bool operator()(int num1, int num2) {
+        return num1 > num2;
+    }
+};
+
+class Solution {
+private:
+    priority_queue<int, vector<int>, Comp> q;
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        for (int num: nums) {
+            q.push(num);
+            if (q.size() > k)
+                q.pop();
+        }
+        return q.top();
+    }
+};
+```
+
+#### [合并k个有序链表](https://leetcode.com/problems/merge-k-sorted-lists/)
+
+```C++
+class Compare {
+public:
+    bool operator()(const ListNode* l1, const ListNode* l2) {
+        return l1->val > l2->val;
+    }
+};
+
+class Solution {
+public:
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        ListNode* res = new ListNode(0), *cur = res;
+        priority_queue<ListNode*, vector<ListNode*>, Compare> q;
+        if (lists.size() == 0) return res->next;
+        
+        for (ListNode* l: lists)
+            if (l != NULL) q.push(l);
+        
+        while (!q.empty()) {
+            cur->next = q.top();
+            cur = cur->next;
+            q.pop();
+            if (cur->next != NULL) q.push(cur->next);
+        }
+        
+        return res->next;
+    }
+};
+```
+
+#### [链表表示的两个数求和](https://leetcode.com/problems/add-two-numbers/)
+
+```C++
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        int prev = 0, cur;
+        ListNode *head = new ListNode(0), *tmp = head;
+        while (l1 != NULL || l2 != NULL) {
+            cur = (l1 != NULL) ? l1->val : 0;
+            cur += (l2 != NULL) ? l2->val : 0;
+            cur += prev;
+            prev = cur / 10;
+            cur = cur % 10;
+            tmp->next = (l1 != NULL) ? l1 : l2;
+            if (l1 != NULL) {
+                l1->val = cur;
+                l1 = l1->next;
+            }
+            if (l2 != NULL) {
+                l2->val = cur;
+                l2 = l2->next;
+            }
+            tmp = tmp->next;
+        }
+        tmp->next = NULL;
+        if (prev != 0)
+            tmp->next = new ListNode(prev);
+        return head->next;
     }
 };
 ```

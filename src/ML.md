@@ -27,8 +27,13 @@ tags:
 | 过拟合的解决方法                               | https://www.zhihu.com/question/59201590                      |
 | 特征工程                                       | https://www.zhihu.com/question/29316149                      |
 | 迭代器和生成器                                 | https://github.com/taizilongxu/interview_python#9-%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E7%94%9F%E6%88%90%E5%99%A8<br />https://foofish.net/iterators-vs-generators.html |
-| Python闭包 | https://foofish.net/python-closure.html |
-| EM | https://snaildove.github.io/2018/10/01/9.EM_and_GEM_LiHang-Statistical-Learning-Methods/ |
+| Python闭包                                     | https://foofish.net/python-closure.html                      |
+| EM                                             | https://snaildove.github.io/2018/10/01/9.EM_and_GEM_LiHang-Statistical-Learning-Methods/ |
+| Softmax/交叉熵                                 | http://zh.d2l.ai/chapter_deep-learning-basics/softmax-regression.html |
+| 激活函数                                       | http://zh.d2l.ai/chapter_deep-learning-basics/mlp.html       |
+| k-means/mapreduce                              | https://blog.csdn.net/asn_forever/article/details/81233547<br />http://blog.taohuawu.club/article/20 |
+|                                                |                                                              |
+|                                                |                                                              |
 |                                                |                                                              |
 |                                                |                                                              |
 
