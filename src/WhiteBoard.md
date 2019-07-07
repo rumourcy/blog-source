@@ -29,6 +29,8 @@ struct ListNode {
 
 ---
 
+<!--more-->
+
 #### 二叉树遍历迭代写法
 
 - [先序](https://leetcode.com/problems/binary-tree-preorder-traversal/)
