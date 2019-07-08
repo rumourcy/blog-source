@@ -297,6 +297,43 @@ public:
 };
 ```
 
+#### [链表表示的两个数求和II](https://leetcode.com/problems/add-two-numbers-ii/)
+
+```C++
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        stack<int> s1, s2;
+        while (l1 != NULL) {
+            s1.push(l1->val);
+            l1 = l1->next;
+        }
+        while (l2 != NULL) {
+            s2.push(l2->val);
+            l2 = l2->next;
+        }
+        ListNode *head = new ListNode(0);
+        int cur = 0;
+        while (!s1.empty() || !s2.empty()) {
+            if (!s1.empty()) {
+                cur += s1.top();
+                s1.pop();
+            }
+            if (!s2.empty()) {
+                cur += s2.top();
+                s2.pop();
+            }
+            head->val = cur % 10;
+            cur = cur / 10;
+            ListNode* tmp = new ListNode(cur);
+            tmp->next = head;
+            head = tmp;
+        }
+        return head->val != 0 ? head : head->next;
+    }
+};
+```
+
 #### [翻转链表](https://leetcode.com/problems/reverse-linked-list/)
 
 ```C++
