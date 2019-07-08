@@ -295,3 +295,36 @@ public:
 };
 ```
 
+#### [翻转链表](https://leetcode.com/problems/reverse-linked-list/)
+
+```C++
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode *prev = NULL, *cur = head;
+        while (cur != NULL) {
+            ListNode *tmp = cur->next;
+            cur->next = prev;
+            prev = cur;
+            cur = tmp;
+        }
+        return prev;
+    }
+};
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        return reverseList(head, NULL);
+    }
+    
+    ListNode* reverseList(ListNode* cur, ListNode* prev) {
+        if (cur == NULL) return prev;
+        ListNode* tmp = cur->next;
+        cur->next = prev;
+        prev = cur;
+        cur = tmp;
+        return reverseList(cur, prev);
+    }
+};
+```
