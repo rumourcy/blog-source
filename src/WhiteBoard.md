@@ -328,3 +328,29 @@ public:
     }
 };
 ```
+
+#### [翻转指定位置的链表](https://leetcode.com/problems/reverse-linked-list-ii/)
+
+```C++
+class Solution {
+public:
+    ListNode* reverseBetween(ListNode* head, int m, int n) {
+        ListNode *pHead = new ListNode(0), *p1 = pHead;
+        for (int i = 1; i < m; ++i) {
+            p1->next = head;
+            head = head->next;
+            p1 = p1->next;
+        }
+        ListNode *p2 = head, *prev = NULL, *cur = head;
+        for (int i = 0; i <= n-m; ++i) {
+            ListNode* tmp = cur->next;
+            cur->next = prev;
+            prev = cur;
+            cur = tmp;
+        }
+        p2->next = cur;
+        p1->next = prev;
+        return pHead->next;
+    }
+};
+```
