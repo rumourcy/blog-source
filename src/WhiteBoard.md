@@ -262,6 +262,8 @@ public:
 };
 ```
 
+---
+
 #### [链表表示的两个数求和](https://leetcode.com/problems/add-two-numbers/)
 
 ```C++
@@ -351,6 +353,30 @@ public:
         p2->next = cur;
         p1->next = prev;
         return pHead->next;
+    }
+};
+```
+
+#### [旋转链表](https://leetcode.com/problems/rotate-list/)
+
+```C++
+class Solution {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+        if (head == NULL) return NULL;
+        ListNode *tail=head, *newHead;
+        int len = 1;
+        while (tail->next != NULL) {
+            tail = tail->next;
+            ++len;
+        }
+        tail->next = head;
+        if ((k = k % len) != 0)
+            for (int i = 0; i < len - k; ++i)
+                tail = tail->next;
+        newHead = tail->next;
+        tail->next = NULL;
+        return newHead;
     }
 };
 ```
