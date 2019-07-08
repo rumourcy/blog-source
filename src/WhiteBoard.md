@@ -417,3 +417,25 @@ public:
     }
 };
 ```
+
+#### [删除倒数第N个节点](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+
+```C++
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode *newHead = new ListNode(0), *prev = newHead;
+        ListNode *p1 = head, *p2 = head;
+        for (int i = 0; i < n; ++i)
+            p2 = p2->next;
+        while (p2 != NULL) {
+            prev->next = p1;
+            p1 = p1->next;
+            p2 = p2->next;
+            prev = prev->next;
+        }
+        prev->next = p1->next;
+        return newHead->next;
+    }
+};
+```
