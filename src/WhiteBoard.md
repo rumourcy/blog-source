@@ -442,7 +442,7 @@ public:
 
 ---
 
-#### 数组k个值的排列
+#### k-子数组
 
 ```C++
 #include <vector>
