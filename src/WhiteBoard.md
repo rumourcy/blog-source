@@ -527,3 +527,32 @@ public:
     }
 };
 ```
+
+---
+
+#### [atoi](https://leetcode.com/problems/string-to-integer-atoi/)
+
+```C++
+class Solution {
+public:
+    int myAtoi(string str) {
+        long long res = 0;
+        int sign = 1, i = 0;
+        for (; i < str.size(); ++i)
+            if (str[i] != ' ')
+                break;
+        if (i < str.size() && (str[i] == '+' || str[i] == '-')) {
+            if (str[i] == '-') sign = -1;
+            ++i;
+        }
+        for (; i < str.size(); ++i) {
+            if (str[i] > '9' || str[i] < '0')
+                break;
+            res = res * 10 + (str[i] - '0');
+            if (res * sign >= INT_MAX) return INT_MAX;
+            if (res * sign <= INT_MIN) return INT_MIN;
+        }
+        return res * sign;
+    }
+};
+```
