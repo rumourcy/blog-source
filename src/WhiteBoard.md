@@ -439,3 +439,91 @@ public:
     }
 };
 ```
+
+---
+
+#### 数组k个值的排列
+
+```C++
+#include <vector>
+#include <algorithm>
+#include <iostream>
+using namespace std;
+
+void combination(vector<int> &arr, vector<vector<int>> &res, vector<int> &path, int k, int pos) {
+  if (path.size() == k) {
+    vector<int> tmp(path.begin(), path.end());
+    res.push_back(tmp);
+    return;
+  }
+  int prev = arr[0] - 1;
+  for (int i = pos; i <= arr.size() - (k - path.size()); ++i) {
+    if (arr[i] != prev) {
+      path.push_back(arr[i]);
+      prev = arr[i];
+      combination(arr, res, path, k, i + 1);
+      path.pop_back();
+    }
+  }
+}
+
+vector<vector<int>> combination(vector<int> arr, int k) {
+  vector<vector<int>> res;
+  vector<int> path;
+  if (arr.size() < k)
+    return res;
+  sort(arr.begin(), arr.end());
+  combination(arr, res, path, k, 0);
+  return res;
+}
+
+int main() {
+  int arrs[] = {1, 1, 2, 3, 5, 6};
+  vector<int> arr(arrs, arrs + sizeof(arrs) / sizeof(int));
+  vector<vector<int>> res = combination(arr, 3);
+
+  for (vector<int> path : res) {
+    for (int num : path)
+      cout << num << " ";
+    cout << endl;
+  }
+  return 0;
+}
+```
+
+#### [有重复全排列](https://leetcode.com/problems/permutations-ii/)
+
+```C++
+class Solution {
+private:
+    vector<vector<int>> res;
+public:
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        permuteUnique(nums, 0);
+        return res;
+    }
+    
+    void permuteUnique(vector<int>& nums, int pos) {
+        if (pos == nums.size()) {
+            vector<int> tmp(nums.begin(), nums.end());
+            res.push_back(tmp);
+            return;
+        }
+        set<int> flag;
+        for (int i = pos; i < nums.size(); ++i) {
+            if (flag.find(nums[i]) == flag.end()) {
+                flag.insert(nums[i]);
+                swap(nums, pos, i);
+                permuteUnique(nums, pos+1);
+                swap(nums, pos, i);
+            }
+        }
+    }
+    
+    void swap(vector<int>& nums, int m, int n) {
+        int tmp = nums[m];
+        nums[m] = nums[n];
+        nums[n] = tmp;
+    }
+};
+```
