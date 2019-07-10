@@ -3,6 +3,7 @@ title: WhiteBoard
 date: 2019-07-05 20:42:20
 tags:
 	- ZERO
+	- Algorithm
 ---
 
 #### 树节点定义
