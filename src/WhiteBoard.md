@@ -557,3 +557,81 @@ public:
     }
 };
 ```
+
+---
+
+#### [中位数](https://www.lintcode.com/problem/median/description)
+
+```C++
+class Solution {
+public:
+    int median(vector<int> &nums) {
+        if (nums.size() == 0) return 0;
+        int lo = 0, hi = nums.size() - 1, mid = (lo + hi) / 2;
+        while (lo < hi) {
+            int p = partition(nums, lo, hi);
+            if (p == mid) return nums[mid];
+            else if (p > mid) hi = p - 1;
+            else lo = p + 1;
+        }
+        return nums[mid];
+    }
+    
+    int partition(vector<int> &nums, int lo, int hi) {
+        int s = lo+1, e = hi;
+        while (true) {
+            while (s <= hi) if (nums[s] <= nums[lo]) ++s; else break;
+            while (e >= lo) if (nums[e] > nums[lo]) --e; else break;
+            if (s >= e) break;
+            swap(nums, s, e);
+        }
+        swap(nums, lo, e);
+        return e;
+    }
+    
+    void swap(vector<int> &nums, int m, int n) {
+        int tmp = nums[m];
+        nums[m] = nums[n];
+        nums[n] = tmp;
+    }
+};
+```
+
+#### 快速排序
+
+```C++
+class Solution {
+public:
+    void sort(vector<int> &nums) {
+        if (nums.size() == 0) return;
+        int lo = 0, hi = nums.size() - 1;
+        sort(nums, lo, hi);
+    }
+    
+    void sort(vector<int> &nums, int lo, int hi) {
+        if (lo >= hi) return;
+        int pos = partition(nums, lo, hi);
+        sort(nums, lo, pos-1);
+        sort(nums, pos+1, hi);
+    }
+    
+    int partition(vector<int> &nums, int lo, int hi) {
+        int s = lo+1, e = hi;
+        while (true) {
+            while (s <= hi) if (nums[s] <= nums[lo]) ++s; else break;
+            while (e >= lo) if (nums[e] > nums[lo]) --e; else break;
+            if (s >= e) break;
+            swap(nums, s, e);
+        }
+        swap(nums, lo, e);
+        return e;
+    }
+    
+    void swap(vector<int> &nums, int m, int n) {
+        int tmp = nums[m];
+        nums[m] = nums[n];
+        nums[n] = tmp;
+    }
+};
+```
+
