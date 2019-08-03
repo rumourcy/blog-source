@@ -635,3 +635,23 @@ public:
 };
 ```
 
+#### [稀疏矩阵乘法](https://www.lintcode.com/problem/sparse-matrix-multiplication/description)
+
+```C++
+class Solution {
+public:
+    vector<vector<int>> multiply(vector<vector<int>> &A, vector<vector<int>> &B) {
+        int a = A.size(), b = A[0].size(), c = B[0].size();
+        vector<vector<int>> res(a, vector<int>(c, 0));
+        for (int i = 0; i < a; ++i) {
+            for (int j = 0; j < c; ++j) {
+                for (int k = 0; k < b; ++k) {
+                    if (A[i][k] == 0 || B[k][j] == 0) continue;
+                    res[i][j] += A[i][k] * B[k][j];
+                }
+            }
+        }
+        return res;
+    }
+};
+```
