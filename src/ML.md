@@ -1,9 +1,4 @@
----
-title: Machine Learning Interview
-date: 2019-06-10 20:42:20
-tags:
-	- ZERO
----
+### Machine Learning Interview
 
 | Terminology                                    | Explanation                                                  |
 | ---------------------------------------------- | ------------------------------------------------------------ |
@@ -23,7 +18,7 @@ tags:
 | L1不可导                                       | https://blog.csdn.net/xiaocong1990/article/details/83039802<br />https://www.zhihu.com/question/38426074 |
 | 时间序列交叉验证                               | https://lonepatient.top/2018/06/10/time-series-nested-cross-validation.html |
 | 方差偏差的分解公式                             | https://blog.csdn.net/qq_32742009/article/details/82142119   |
-| 数据不平衡                                     | https://www.zhihu.com/question/269698662<br />https://www.rogoso.info/oversampling-and-undersampling/<br />https://blog.csdn.net/shenxiaoming77/article/details/72616333 |
+| 类别不平衡                                     | https://www.zhihu.com/question/269698662<br />https://www.rogoso.info/oversampling-and-undersampling/<br />https://blog.csdn.net/shenxiaoming77/article/details/72616333 |
 | 过拟合的解决方法                               | https://www.zhihu.com/question/59201590                      |
 | 特征工程                                       | https://www.zhihu.com/question/29316149                      |
 | 迭代器和生成器                                 | https://github.com/taizilongxu/interview_python#9-%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E7%94%9F%E6%88%90%E5%99%A8<br />https://foofish.net/iterators-vs-generators.html |
@@ -32,8 +27,4 @@ tags:
 | Softmax/交叉熵                                 | http://zh.d2l.ai/chapter_deep-learning-basics/softmax-regression.html |
 | 激活函数                                       | http://zh.d2l.ai/chapter_deep-learning-basics/mlp.html       |
 | k-means/mapreduce                              | https://blog.csdn.net/asn_forever/article/details/81233547<br />http://blog.taohuawu.club/article/20 |
-|                                                |                                                              |
-|                                                |                                                              |
-|                                                |                                                              |
-|                                                |                                                              |
 
