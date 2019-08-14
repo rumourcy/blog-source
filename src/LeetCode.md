@@ -29,3 +29,13 @@
 | [516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence/) | 中等 |
 | [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | 中等 |
 
+#### 树
+
+| 题号                                                         | 难度 |
+| ------------------------------------------------------------ | ---- |
+|                                                              |      |
+| [95. 不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/) | 中等 |
+| [96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/) | 中等 |
+| [99. 恢复二叉搜索树](https://leetcode-cn.com/problems/recover-binary-search-tree/) | 困难 |
+| [108. 将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/) | 简单 |
+
