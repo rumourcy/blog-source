@@ -2,9 +2,9 @@
 
 #### 一维DP
 
-| 题号                                                         | 重要度 | 难度 |
+| 题号                                                         | 公司   | 难度 |
 | ------------------------------------------------------------ | ------ | ---- |
-| [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/) |        | 简单 |
+| [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/) | 拼多多 | 简单 |
 | [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) |        | 简单 |
 | [96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/) |        | 中等 |
 | [120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/)(空间复杂度优化为O(n)) |        | 中等 |
@@ -15,7 +15,7 @@
 
 #### 二维DP
 
-| 题号                                                         | 重要度                                                      | 难度 |
+| 题号                                                         | 公司                                                    | 难度 |
 | ------------------------------------------------------------ | ---- | ---- |
 | [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) |  | 中等 |
 | [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/) |  | 困难 |
@@ -32,7 +32,7 @@
 
 #### 树
 
-| 题号                                                         | 重要度        | 难度 |
+| 题号                                                         | 公司          | 难度 |
 | ------------------------------------------------------------ | ------------- | ---- |
 |                                                              |               |      |
 | [95. 不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/) |               | 中等 |
@@ -46,4 +46,29 @@
 | [235. 二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) |               | 简单 |
 | [236. 二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) | 字节跳动      | 中等 |
 | [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) | 猿辅导/作业帮 | 困难 |
+| [958. 二叉树的完全性检验](https://leetcode-cn.com/problems/check-completeness-of-a-binary-tree/) | 字节跳动      | 中等 |
+
+字符串
+
+| 题号                                                         | 公司     | 难度 |
+| ------------------------------------------------------------ | -------- | ---- |
+| [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | 字节跳动 | 中等 |
+|                                                              |          |      |
+|                                                              |          |      |
+
+#### 链表
+
+| 题号                                                         | 公司     | 难度 |
+| ------------------------------------------------------------ | -------- | ---- |
+| [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) | 字节跳动 | 简单 |
+| [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/) | 字节跳动 | 中等 |
+|                                                              |          |      |
+
+#### 双指针
+
+| 题号                                                   | 公司 | 难度 |
+| ------------------------------------------------------ | ---- | ---- |
+| [15. 三数之和](https://leetcode-cn.com/problems/3sum/) | 依图 | 中等 |
+|                                                        |      |      |
+|                                                        |      |      |
 
