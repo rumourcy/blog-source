@@ -1,4 +1,4 @@
-### 0LeetCode
+### LeetCode
 
 #### 一维DP
 
