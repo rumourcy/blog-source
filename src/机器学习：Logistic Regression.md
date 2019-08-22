@@ -18,6 +18,8 @@ P(y=1|x) = \frac{e^{w \cdot x + b}}{1 + e^{w \cdot x + b}} \\
 P(y=0|x) = \frac{1}{1 + e^{w \cdot x + b}}
 $$
 
+<!--more-->
+
 #### 代价函数
 
 令：
